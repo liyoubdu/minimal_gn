@@ -79,3 +79,13 @@ That's all there is to it!
 
 [GN]: https://gn.googlesource.com/gn
 [Ninja]: https://ninja-build.org/
+
+
+```bash
+echo $(( $RANDOM % 5000 + 1 )) > flag.txt && \
+../ninja -C out -j 1 -v && \
+echo =============================1 && \
+cat out/gen/world.h && \
+echo ==============================2 && \
+out/hello
+```
