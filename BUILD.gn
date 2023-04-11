@@ -32,7 +32,7 @@ toolchain("toolchain") {
   }
 
   tool("link") {
-    command = "$ld {{inputs}} {{libs}} -o {{target_output_name}}"
+    command = "$ld {{inputs}} -o {{target_output_name}}"
     outputs = [ "{{target_output_name}}" ]
   }
 
