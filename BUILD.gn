@@ -12,8 +12,10 @@ action("world") {
     "world.cc",
     "world.h",
   ]
+  inputs = [
+    "flag.txt",
+  ]
   outputs = [
-    "$root_build_dir/$gen_dir/world.cc",
     "$root_build_dir/$gen_dir/world.h",
   ]
 }
