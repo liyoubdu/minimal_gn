@@ -82,10 +82,12 @@ That's all there is to it!
 
 
 ```bash
-echo $(( $RANDOM % 5000 + 1 )) > flag.txt && \
-../ninja -C out -j 1 -v && \
 echo =============================1 && \
+echo $(( $RANDOM % 5000 + 1 )) > flag.txt && \
+echo =============================2 && \
+../ninja -C out -j 1 -v && \
+echo =============================3 && \
 cat out/gen/world.h && \
-echo ==============================2 && \
+echo =============================4 && \
 out/hello
 ```
